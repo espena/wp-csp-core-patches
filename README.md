@@ -1,0 +1,1 @@
+# wp-csp-core-patches

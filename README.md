@@ -72,3 +72,18 @@ Basically, the web server searches for the secret placeholder string and replace
 it with a one-shot nonce value that is referred to by the CSP header. This
 confirms to the client that the inline `<script>` or `<style>` tags in question
 are legitimate and not from someone attempting an injection attack.
+
+## License and disclaimer
+
+wp-csp-core-patches is written by Espen Andersen, and released under the
+GNU General Public License v. 2.0.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+Although the author has attempted to find and correct any bugs in the free
+software programs, the author is not responsible for any damage or losses of
+any kind caused by the use or misuse of the programs. The author is under no
+obligation to provide support, service, corrections, or upgrades
+to the free software programs.

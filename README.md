@@ -12,6 +12,8 @@ that changes with each request. The nonce proves that inline scripts and styles
 originates from the web application itself, so that it will not be blocked when
 the client enforces the Content Security Policy.
 
+**Before you start, make a backup copy of your WordPress directory!**
+
 ## How to install the patches
 
 1. Clone the Git repository and cd into the base directory:
@@ -35,6 +37,7 @@ the client enforces the Content Security Policy.
 5. Update Nginx. Insert the correct nonce placeholder into the site
    configuration file. See suggested configuration parameters in
    `wp-csp-patch/nginx.site.conf`.
+
 6. Restart Nginx.
 ---
 **NOTE**

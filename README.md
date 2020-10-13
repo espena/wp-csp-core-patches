@@ -19,9 +19,13 @@ I know. *Don't Hack Wordpress' Core* -- although that's exactly what these
 patches does. There's a couple of reasons why. First and foremost, the patches
 do not change anything substantial in the code. It merely appends an extra,
 static attribute to inline `<script>` and `<style>` tags. An update or reinstall
-of WordPress will revert the patches, which is no big deal. Then you will have
+of WordPress will revert the patches, which is fine. Then you will have
 to run the apply script again, or bail out and allow `unsafe-inline` in your
-CSP header.
+CSP header. It makse no sense to run PHP code for each page rendering to
+re-insert a few static attributes when all it takes is a small modification
+of the original output code. Besides, the patch file format leaves for anyone
+to easily inspect the modifications in identified files. That is good from a
+security perspective.
 
 ---
 

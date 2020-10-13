@@ -55,6 +55,8 @@ WordPress in its entirety within a few iterations.
 
 ---
 
+## Nginx setup
+
 For this to work, Nginx must be configured with two additional modules:
 * `ngx_set_misc` for random nonce generation
 * `http_sub_module` for search and replace functionality

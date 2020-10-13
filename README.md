@@ -15,15 +15,13 @@ the client enforces the Content Security Policy.
 ---
 **NOTE**
 
-I know. *Don't Hack WordPress' Core* -- although that's exactly what these
+I know. *Don't Hack Wordpress' Core* -- although that's exactly what these
 patches does. There's a couple of reasons why. First and foremost, the patches
-do not change anything substantial in the code. I merely appends an extra,
-static attribute to `<script>` and `<style>` tags. An update or reinstall of
-WordPress will revert the patches, which is fine. Then you will either have to
-run the apply script atain, or bail out and allow `unsafe-inline` in our CSP
-header. I could have vritten a plugin that would probably do the same thing,
-but it would probably be pretty cumbersome to identify all the PHP hooks and
-filters to apply in order to catch the relevant parts of the output.
+do not change anything substantial in the code. It merely appends an extra,
+static attribute to inline `<script>` and `<style>` tags. An update or reinstall
+of WordPress will revert the patches, which is no big deal. Then you will have
+to run the apply script again, or bail out and allow `unsafe-inline` in your
+CSP header.
 
 ---
 

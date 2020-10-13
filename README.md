@@ -5,7 +5,7 @@ that must be dealt with in order to implement a proper
 [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy)
 (CSP) in your site's server headers.
 
-By applying the patches, a nonce attribute is added to inline `<script>`
+By applying these patches, a nonce attribute is added to inline `<script>`
 and `<style>` tags in the relevant source files. The attribute value is a
 secret placeholder value that the web server will replace with a random nonce
 that changes with each request. The nonce proves that inline scripts and styles

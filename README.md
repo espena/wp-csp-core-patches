@@ -9,8 +9,8 @@ By applying these patches, a nonce attribute is added to inline `<script>`
 and `<style>` tags in the relevant source files. The attribute value is a
 secret placeholder value that the web server will replace with a random nonce
 that changes with each request. The nonce proves that inline scripts and styles
-originates from the original web application, so that it will not be blocked
-when the client enforces the Content Security Policy.
+originates from the web application itself, so that it will not be blocked when
+the client enforces the Content Security Policy.
 
 For this to work, Nginx must be configured with two additional modules:
 * `ngx_set_misc` for random nonce generation

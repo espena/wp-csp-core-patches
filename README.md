@@ -76,7 +76,7 @@ are legitimate and not from someone attempting an injection attack.
 ## License and disclaimer
 
 wp-csp-core-patches is written by Espen Andersen, and released under the
-GNU General Public License v. 2.0.
+[GNU General Public License v. 2.0](https://github.com/espena/wp-csp-core-patches/blob/main/LICENSE).
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A

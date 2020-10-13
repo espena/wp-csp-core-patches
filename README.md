@@ -12,6 +12,14 @@ that changes with each request. The nonce proves that inline scripts and styles
 originates from the web application itself, so that it will not be blocked when
 the client enforces the Content Security Policy.
 
+## How to install the patches
+
+1. Clone the repository and cd into the base directory:
+   ```
+   #> git clone https://github.com/espena/wp-csp-core-patches.git
+   #> cd wp-csp-core-patches
+   ```
+
 ---
 **NOTE**
 
@@ -23,8 +31,8 @@ of WordPress will revert the patches, which is fine. Then you will have
 to run the apply script again, or bail out and allow `unsafe-inline` in your
 CSP header. The patch file format leaves for anyone to easily inspect the
 modifications. That is good from a security perspective. Besides, this is
-a temporary fix, as I assume inline scripts and styles will be removed from
-WordPress within a couple of iterations.
+a temporary fix, as I expect inline scripts and styles to be removed from
+WordPress in its entirety within a few iterations.
 
 ---
 

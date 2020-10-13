@@ -12,9 +12,9 @@ that changes with each request. The nonce proves that inline scripts and styles
 originates from the web application itself, so that it will not be blocked when
 the client enforces the Content Security Policy.
 
-**Before you start, make a backup copy of your WordPress directory!**
-
 ## How to install the patches
+
+**Before you start, make a backup copy of your WordPress directory!**
 
 1. Clone the Git repository and cd into the base directory:
    ```

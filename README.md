@@ -14,12 +14,28 @@ the client enforces the Content Security Policy.
 
 ## How to install the patches
 
-1. Clone the repository and cd into the base directory:
+1. Clone the Git repository and cd into the base directory:
    ```
    #> git clone https://github.com/espena/wp-csp-core-patches.git
    #> cd wp-csp-core-patches
    ```
-
+2. Run *make* to create the output directory and build the patch files:
+   ```
+   #> make
+   ```
+3. Move `wp-csp-patch` to WordPress' root directory:
+   ```
+   #> mv wp-csp-patch /path/to/wordpress/root/.
+   ```
+4. From WordPress' root directory, run the *apply* script:
+   ```
+   #> cd /path/to/wordpress/root/
+   #> wp-csp-patch/apply.sh
+   ```
+5. Update Nginx. Insert the correct nonce placeholder into the site
+   configuration file. See suggested configuration parameters in
+   `wp-csp-patch/nginx.site.conf`.
+6. Restart Nginx.
 ---
 **NOTE**
 

@@ -12,6 +12,21 @@ that changes with each request. The nonce proves that inline scripts and styles
 originates from the web application itself, so that it will not be blocked when
 the client enforces the Content Security Policy.
 
+---
+**NOTE**
+
+I know. *Don't Hack WordPress' Core* -- although that's exactly what these
+patches does. There's a couple of reasons why. First and foremost, the patches
+do not change anything substantial in the code. I merely appends an extra,
+static attribute to `<script>` and `<style>` tags. An update or reinstall of
+WordPress will revert the patches, which is fine. Then you will either have to
+run the apply script atain, or bail out and allow `unsafe-inline` in our CSP
+header. I could have vritten a plugin that would probably do the same thing,
+but it would probably be pretty cumbersome to identify all the PHP hooks and
+filters to apply in order to catch the relevant parts of the output.
+
+---
+
 For this to work, Nginx must be configured with two additional modules:
 * `ngx_set_misc` for random nonce generation
 * `http_sub_module` for search and replace functionality

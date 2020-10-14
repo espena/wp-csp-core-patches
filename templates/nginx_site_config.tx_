@@ -1,3 +1,10 @@
+# This is your secret noce placeholder:
+#
+#     %%secret_placeholder%%
+#
+# Keep this value to yourself, as an attacker can use it to get his or hers
+# injection attack whitelisted by your web server.
+
 # These lines should go into the server block of your site configuration.
 # Your secret placeholder %%secret_placeholder%% will be replaced
 # by a unique nonce that changes between requests. The placeholder token

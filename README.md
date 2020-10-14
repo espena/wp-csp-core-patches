@@ -1,9 +1,9 @@
-# wp-csp-core-patches
+# wp-csp-core-patches for WordPress v. 5.5.1
 
 WordPress' core templates contain some inline styling and scripting elements
 that must be dealt with in order to implement a proper
 [Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy)
-(CSP) in your site's server headers.
+(CSP).
 
 By applying these patches, a nonce attribute is added to inline `<script>`
 and `<style>` tags in the relevant source files. The attribute value is a
@@ -21,7 +21,9 @@ the client enforces the Content Security Policy.
    #> git clone https://github.com/espena/wp-csp-core-patches.git
    #> cd wp-csp-core-patches
    ```
-2. Run *make* to create the output directory and build the patch files:
+2. Run `make` to build the patches and write the output files to `wp-csp-patch`.
+   This will also generate the secret nonce placeholder that will be
+   known to you only:
    ```
    #> make
    ```
@@ -29,27 +31,27 @@ the client enforces the Content Security Policy.
    ```
    #> mv wp-csp-patch /path/to/wordpress/root/.
    ```
-4. From WordPress' root directory, run the *apply* script:
+4. From WordPress' root directory, run the `apply.sh` script:
    ```
    #> cd /path/to/wordpress/root/
    #> wp-csp-patch/apply.sh
    ```
-5. Update Nginx. Insert the correct nonce placeholder into the site
-   configuration file. See suggested configuration parameters in
-   `wp-csp-patch/nginx.site.conf`.
+5. Update Nginx. Insert the generated nonce placeholder into the site
+   configuration file. See your secret nonce placeholder value along with
+   suggested configuration parameters in `wp-csp-patch/nginx_site_config.txt`.
 
 6. Restart Nginx.
 ---
 **NOTE**
 
-I know. *Don't Hack Wordpress' Core* -- although that's exactly what these
-patches does. There's a couple of reasons why. First and foremost, the patches
+I know! *Don't Hack Wordpress' Core* -- although that's exactly what these
+patches do. There's a couple of reasons why. First and foremost, the patches
 do not change anything substantial in the code. It merely appends an extra,
-static attribute to inline `<script>` and `<style>` tags. An update or reinstall
-of WordPress will revert the patches, which is fine. Then you will have
-to run the apply script again, or bail out and allow `unsafe-inline` in your
-CSP header. The patch file format leaves for anyone to easily inspect the
-modifications. That is good from a security perspective. Besides, this is
+static attribute to inline `<script>` and `<style>` tags. Updating or
+reinstalling WordPress will revert the patches, which is fine. Then you will
+have to run the `apply.sh` script again, or bail out and allow `unsafe-inline`
+in your CSP header. The patch file format leaves for anyone to easily inspect
+the modifications. That is good from a security perspective. Besides, this is
 a temporary fix, as I expect inline scripts and styles to be removed from
 WordPress in its entirety within a few iterations.
 

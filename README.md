@@ -45,7 +45,7 @@ the client enforces the Content Security Policy.
 **NOTE**
 
 I know! *Don't Hack Wordpress' Core* -- although that's exactly what these
-patches do. There's a couple of reasons why. First and foremost, the patches
+patches do. There are a couple of reasons why. First and foremost, the patches
 do not change anything substantial in the code. It merely appends an extra,
 static attribute to inline `<script>` and `<style>` tags. Updating or
 reinstalling WordPress will revert the patches, which is fine. Then you will

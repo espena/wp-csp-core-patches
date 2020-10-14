@@ -50,10 +50,10 @@ do not change anything substantial in the code. It merely appends an extra,
 static attribute to inline `<script>` and `<style>` tags. Updating or
 reinstalling WordPress will revert the patches, which is fine. Then you will
 have to run the `apply.sh` script again, or bail out and allow `unsafe-inline`
-in your CSP header. The patch file format leaves for anyone to easily inspect
-the modifications. That is good from a security perspective. Besides, this is
-a temporary fix, as I expect inline scripts and styles to be removed from
-WordPress in its entirety within a few iterations.
+in your CSP header. The patch files can be easily inspected to check what
+modifications are made. That is good from a security perspective. Besides,
+this is a temporary fix, as I expect inline scripts and styles to be removed
+from WordPress in its entirety within a few iterations.
 
 ---
 

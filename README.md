@@ -14,6 +14,11 @@ the client enforces the Content Security Policy. See
 [my blog posting](https://espenandersen.no/fixing-content-security-in-wordpress/)
 about this project for more details.
 
+Please note that the elements patched here are the ones causing trouble for my
+specific WordPress installation. However, there might be even more unpatched
+inline scripts and styles in then core that I have not yet encountered. Feel
+fre to create an issue or pull request where you suggest additional patches.
+
 ## How to install the patches
 
 **Before you start, make a backup copy of your WordPress directory!**

@@ -60,7 +60,7 @@ have to run the `apply.sh` script again, or bail out and allow `unsafe-inline`
 in your CSP header. The patch files can be easily inspected to check what
 modifications are made. That is good from a security perspective. Besides,
 this is a temporary fix, as I expect inline scripts and styles to be removed
-from WordPress in its entirety within a few iterations.
+from WordPress within a few iterations.
 
 ---
 

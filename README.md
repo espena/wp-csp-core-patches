@@ -11,8 +11,8 @@ secret placeholder value that the web server will replace with a random nonce
 that changes with each request. The nonce proves that inline scripts and styles
 originates from the web application itself, so that it will not be blocked when
 the client enforces the Content Security Policy. See
-[espenandersen.no/fixing-content-security-in-wordpress/](https://espenandersen.no/fixing-content-security-in-wordpress/)
-for more about this.
+[my blog posting](https://espenandersen.no/fixing-content-security-in-wordpress/)
+about this project for more details.
 
 ## How to install the patches
 

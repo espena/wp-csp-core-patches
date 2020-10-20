@@ -43,11 +43,19 @@ fre to create an issue or pull request where you suggest additional patches.
    #> cd /path/to/wordpress/root/
    #> wp-csp-patch/apply.sh
    ```
-5. Update Nginx. Insert the generated nonce placeholder into the site
+5. Restore ownership of patched files. The owner of the patced files may have
+   changed after the patch. Reset the owner to the correct one,
+   usually `www-data`, for all php files in wp-includes:
+   ```
+   #> sudo chown www-data:www-data wp-includes/*.php
+   #> sudo chown www-data:www-data wp-includes/widgets/*.php
+   ```
+
+6. Update Nginx. Insert the generated nonce placeholder into the site
    configuration file. See your secret nonce placeholder value along with
    suggested configuration parameters in `wp-csp-patch/nginx_site_config.txt`.
 
-6. Restart Nginx.
+7. Restart Nginx.
 ---
 **NOTE**
 

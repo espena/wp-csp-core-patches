@@ -47,6 +47,7 @@ fre to create an issue or pull request where you suggest additional patches.
    changed after the patch. Reset the owner to the correct one,
    usually `www-data`, for all php files in wp-includes:
    ```
+   #> cd /path/to/wordpress/root/
    #> sudo chown www-data:www-data wp-includes/*.php
    #> sudo chown www-data:www-data wp-includes/widgets/*.php
    ```
